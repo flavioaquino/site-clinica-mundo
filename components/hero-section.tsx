@@ -9,7 +9,7 @@ export function HeroSection() {
         <div
           className="w-full h-full bg-cover bg-center opacity-30"
           style={{
-            backgroundImage: "url('/placeholder.svg?height=800&width=1200')",
+            backgroundImage: "url('/images/image.png?height=800&width=1200')",
           }}
         ></div>
       </div>
@@ -43,13 +43,16 @@ export function HeroSection() {
           <div className="relative">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
               <div className="aspect-square bg-gradient-to-br from-yellow-300 to-orange-400 rounded-xl flex items-center justify-center">
-                <div className="text-center text-blue-900">
-                  <div className="w-32 h-32 bg-white rounded-full flex items-center justify-center mb-4 mx-auto">
-                    <MapPin className="w-16 h-16 text-blue-600" />
-                  </div>
-                  <p className="font-semibold">Crianças Felizes</p>
-                  <p className="text-sm">Cuidado Especializado</p>
-                </div>
+              <iframe
+                title="Localização Clínica Mundo"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d910.9624076955577!2d-43.93632475295739!3d-19.94031108092522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa699219e14f879%3A0x2d4cacc877f17bf1!2sCl%C3%ADnica%20Mundo%20-%20Desenvolvimento%20Infantil!5e0!3m2!1spt-BR!2sbr!4v1757385714350!5m2!1spt-BR!2sbr"
+                width="100%"
+                height="100%"
+                style={{ border: 0, borderRadius: "0.75rem" }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
               </div>
             </div>
           </div>

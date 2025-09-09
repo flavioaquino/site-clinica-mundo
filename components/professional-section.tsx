@@ -56,7 +56,7 @@ export function ProfessionalSection() {
           <div className="relative">
             <div className="aspect-[3/4] bg-gradient-to-br from-blue-100 to-yellow-100 rounded-2xl overflow-hidden">
               <img
-                src="/placeholder.svg?height=600&width=450"
+                src="./images/img11.jpg?height=600&width=450"
                 alt="Tábata Camelo - Fisioterapeuta"
                 className="w-full h-full object-cover"
               />

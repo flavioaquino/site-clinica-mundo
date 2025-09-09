@@ -63,15 +63,17 @@ export function MissionSection() {
             <div className="aspect-square bg-gradient-to-br from-yellow-300 to-orange-400 rounded-full flex items-center justify-center">
               <div className="w-4/5 h-4/5 bg-white rounded-full flex items-center justify-center">
                 <img
-                  src="/placeholder.svg?height=300&width=300"
+                  src="./images/img12.png?height=300&width=300"
                   alt="Criança feliz"
                   className="w-3/4 h-3/4 object-cover rounded-full"
                 />
               </div>
             </div>
-            <div className="absolute -top-4 -right-4 w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center">
-              <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-xs">M</span>
+            <div className="absolute -top-4 -right-4 w-24 h-24 bg-yellow-400 rounded-full flex items-center justify-center">
+              <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+                  <img src="/favicon.ico" alt="Clínica Mundo Logo" className="w-10 h-10" />
+                </div>
               </div>
             </div>
           </div>

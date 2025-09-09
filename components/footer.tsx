@@ -1,4 +1,6 @@
-import { MapPin, Phone, Mail, Clock, Instagram, Facebook } from "lucide-react"
+"use client"
+
+import { MapPin, Phone, Mail, Clock, Instagram } from "lucide-react"
 
 export function Footer() {
   return (
@@ -7,8 +9,8 @@ export function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-yellow-500 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-sm">M</span>
+              <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                <img src="/favicon.ico" alt="Clínica Mundo Logo" className="w-5 h-5" />
               </div>
               <span className="text-xl font-bold">Clínica Mundo</span>
             </div>
@@ -17,16 +19,20 @@ export function Footer() {
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.instagram.com/clinica.mundo/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
               >
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="http://wa.me/553175557435"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
               >
-                <Facebook className="w-5 h-5" />
+                <i className="fa-brands fa-whatsapp text-xl"></i>
               </a>
             </div>
           </div>
@@ -37,8 +43,8 @@ export function Footer() {
               <div className="flex items-start space-x-3">
                 <Phone className="w-5 h-5 text-yellow-500 flex-shrink-0 mt-1" />
                 <div>
-                  <p className="text-gray-300">(31) 99999-9999</p>
-                  <p className="text-gray-400 text-sm">WhatsApp</p>
+                  <p className="text-gray-300">(31) 7555-7435</p>
+                  <p onClick={() => window.open("http://wa.me/553175557435", "_blank")} className="text-gray-400 text-sm cursor-pointer">WhatsApp</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">

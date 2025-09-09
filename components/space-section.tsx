@@ -1,18 +1,30 @@
+"use client"
+
+import { useState } from 'react'
+
 export function SpaceSection() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null)
+  
   const images = [
-    "/placeholder.svg?height=200&width=200",
-    "/placeholder.svg?height=200&width=200",
-    "/placeholder.svg?height=200&width=200",
-    "/placeholder.svg?height=200&width=200",
-    "/placeholder.svg?height=200&width=200",
-    "/placeholder.svg?height=200&width=200",
-    "/placeholder.svg?height=200&width=200",
-    "/placeholder.svg?height=200&width=200",
-    "/placeholder.svg?height=200&width=200",
-    "/placeholder.svg?height=200&width=200",
-    "/placeholder.svg?height=200&width=200",
-    "/placeholder.svg?height=200&width=200",
+    "/images/img1.jpg",
+    "/images/img2.jpg",
+    "/images/img3.jpg",
+    "/images/img4.jpg",
+    "/images/img5.jpg",
+    "/images/img6.jpg",
+    "/images/img7.jpg",
+    "/images/img8.jpg",
+    "/images/img9.jpg",
+    "/images/img10.jpg"
   ]
+
+  const handleImageClick = (src: string) => {
+    setSelectedImage(src)
+  }
+
+  const closeModal = () => {
+    setSelectedImage(null)
+  }
 
   return (
     <section id="espaco" className="py-20 bg-gradient-to-br from-blue-50 to-yellow-50">
@@ -34,7 +46,8 @@ export function SpaceSection() {
           {images.map((src, index) => (
             <div
               key={index}
-              className="aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
+              className="aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow cursor-pointer"
+              onClick={() => handleImageClick(src)}
             >
               <img
                 src={src || "/placeholder.svg"}
@@ -44,6 +57,27 @@ export function SpaceSection() {
             </div>
           ))}
         </div>
+        {selectedImage && (
+          <div
+            className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
+            onClick={closeModal}
+          >
+            <div className="relative max-w-xl max-h-[100vh] w-full">
+              <button
+                className="absolute -top-10 right-0 text-white text-xl p-2"
+                onClick={closeModal}
+              >
+                ✕
+              </button>
+              <img
+                src={selectedImage}
+                alt="Imagem ampliada"
+                className="w-full h-full object-contain rounded-lg"
+                onClick={(e) => e.stopPropagation()}
+              />
+            </div>
+          </div>
+        )}
 
         <div className="text-center mt-12">
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
