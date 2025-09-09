@@ -35,7 +35,7 @@ export function HeroSection() {
                 </p>
               </div>
             </div>
-            <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-semibold">
+            <Button onClick={() => window.open("https://api.whatsapp.com/send?phone=553175557435", "_blank")} size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-semibold">
               Agendar Consulta
             </Button>
           </div>
