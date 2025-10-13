@@ -1,5 +1,5 @@
 "use client"
-import { MapPin } from "lucide-react"
+import { MapPin, Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function HeroSection() {
@@ -15,34 +15,77 @@ export function HeroSection() {
         ></div>
       </div>
 
-      <div className="relative z-10 container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 container mx-auto px-4 py-20">
+        <div className="max-w-4xl mx-auto text-center mb-12">
+          <div className="flex items-center justify-center space-x-2 mb-4">
+            <MapPin className="w-6 h-6 text-yellow-300" />
+            <span className="text-yellow-300 font-semibold">Localização Privilegiada na Savassi</span>
+          </div>
+          <h1 className="text-5xl lg:text-6xl font-bold mb-4 text-white">Clínica Mundo</h1>
+          <p className="text-2xl lg:text-3xl font-medium text-yellow-200 mb-8">Desenvolvimento Infantojuvenil</p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
           <div className="text-white">
-            <div className="mb-8">
-              <div className="flex items-center space-x-2 mb-4">
-                <MapPin className="w-6 h-6 text-yellow-300" />
-                <span className="text-yellow-300">Localização Privilegiada</span>
+            <div className="bg-blue-600/80 backdrop-blur-sm rounded-lg p-8 space-y-6">
+              <h2 className="text-2xl font-bold mb-4">Nosso Espaço</h2>
+              <p className="text-lg leading-relaxed">
+                Nosso espaço foi planejado para oferecer conforto e praticidade, priorizando a satisfação das famílias, 
+                a mobilidade e o bom uso do tempo.
+              </p>
+              <p className="text-lg leading-relaxed">
+                No coração da Savassi - BH, perto de shoppings, restaurantes e hotéis, com acesso fácil às principais 
+                vias da cidade.
+              </p>
+              
+              <div className="space-y-3 pt-4">
+                <div className="flex items-center space-x-3">
+                  <Check className="w-6 h-6 text-yellow-300 flex-shrink-0" />
+                  <span className="text-lg font-medium">Acesso fácil</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Check className="w-6 h-6 text-yellow-300 flex-shrink-0" />
+                  <span className="text-lg font-medium">Espaço climatizado</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Check className="w-6 h-6 text-yellow-300 flex-shrink-0" />
+                  <span className="text-lg font-medium">Equipe interdisciplinar</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Check className="w-6 h-6 text-yellow-300 flex-shrink-0" />
+                  <span className="text-lg font-medium">Coworking para os pais ou responsáveis</span>
+                </div>
               </div>
-              <h1 className="text-4xl lg:text-5xl font-bold mb-6">Nossa Clínica</h1>
-              <div className="bg-blue-600/80 backdrop-blur-sm rounded-lg p-6 space-y-4">
-                <p className="text-lg leading-relaxed">
-                  No coração da Savassi, perto de shoppings, restaurantes, hotéis, e fácil acesso às principais vias da
-                  cidade. Nosso espaço é planejado para oferecer conforto e facilidade, focado na satisfação, mobilidade
-                  e otimização de tempo para nossas famílias.
-                </p>
-                <p className="text-lg leading-relaxed">
-                  Contamos com um ambiente climatizado, acolhedor e um coworking para os pais e cuidadores otimizarem
-                  seu tempo enquanto aguardam as crianças.
+
+              <div className="pt-6 border-t border-white/30">
+                <p className="text-lg italic text-yellow-200">
+                  "Ambientes climatizados, atendimento qualificado e coworking para transformar espera em produtividade"
                 </p>
               </div>
             </div>
-            <Button onClick={() => window.open("https://api.whatsapp.com/send?phone=553175557435", "_blank")} size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-semibold">
-              Agendar Consulta
-            </Button>
+            
+            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+              <Button 
+                onClick={() => window.open("https://api.whatsapp.com/send?phone=553175557435", "_blank")} 
+                size="lg" 
+                className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-semibold text-lg px-8 py-6"
+              >
+                Agendar Consulta
+              </Button>
+              <Button 
+                onClick={() => window.open("https://maps.app.goo.gl/your-google-maps-link", "_blank")} 
+                size="lg" 
+                variant="outline"
+                className="bg-white/90 hover:bg-white text-blue-900 font-semibold text-lg px-8 py-6 border-2 border-white"
+              >
+                <MapPin className="w-5 h-5 mr-2" />
+                Como Chegar
+              </Button>
+            </div>
           </div>
 
           <div className="relative">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
               <div className="aspect-square bg-gradient-to-br from-yellow-300 to-orange-400 rounded-xl flex items-center justify-center">
               <iframe
                 title="Localização Clínica Mundo"
