@@ -1,14 +1,60 @@
 "use client"
-import { MapPin, Check } from "lucide-react"
+import { MapPin, Check, ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { useState, useEffect } from "react"
 
 export function HeroSection() {
+  const [currentSlide, setCurrentSlide] = useState(0)
+
+  // Imagens do carrossel - substitua pelos caminhos das imagens reais
+  // 
+  // 📐 DIMENSÕES RECOMENDADAS DOS BANNERS:
+  // - Desktop: 1920x550px (aspect ratio ~21:7)
+  // - Tablet: 1200x450px (aspect ratio ~16:6)
+  // - Mobile: 800x342px (aspect ratio ~21:9)
+  // 
+  // 💡 DICA: Use uma imagem de 1920x550px que funcionará bem em todos os tamanhos
+  // Formato: JPG ou PNG | Peso máximo recomendado: 300KB por imagem
+  //
+  const banners = [
+    {
+      id: 1,
+      image: "/images/banner1.jpg",
+      alt: "Banner 1 - Clínica Mundo"
+    },
+    {
+      id: 2,
+      image: "/images/banner2.jpg",
+      alt: "Banner 2 - Desenvolvimento Infantil"
+    },
+    {
+      id: 3,
+      image: "/images/banner3.jpg",
+      alt: "Banner 3 - Nosso Espaço"
+    }
+  ]
+
+  // Auto-play do carrossel (troca a cada 5 segundos)
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % banners.length)
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [banners.length])
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % banners.length)
+  }
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + banners.length) % banners.length)
+  }
+
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center">
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-blue-500 to-yellow-400 opacity-90"></div>
+    <section id="inicio" className="relative min-h-screen flex items-center bg-white">
       <div className="absolute inset-0">
         <div
-          className="w-full h-full bg-cover bg-center opacity-30"
+          className="w-full h-full bg-cover bg-center opacity-20"
           style={{
             backgroundImage: "url('/images/image.png?height=800&width=1200')",
           }}
@@ -16,19 +62,76 @@ export function HeroSection() {
       </div>
 
       <div className="relative z-10 container mx-auto px-4 py-20">
-        <div className="max-w-4xl mx-auto text-center mb-12">
-          <div className="flex items-center justify-center space-x-2 mb-4">
-            <MapPin className="w-6 h-6 text-yellow-300" />
-            <span className="text-yellow-300 font-semibold">Localização Privilegiada na Savassi</span>
+        {/* Carrossel de Banners */}
+        <div className="max-w-5xl mx-auto mb-8">
+          <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl">
+            {/* Imagens do Carrossel */}
+            <div className="relative aspect-[21/9] md:aspect-[16/6] lg:aspect-[21/7]">
+              {banners.map((banner, index) => (
+                <div
+                  key={banner.id}
+                  className={`absolute inset-0 transition-opacity duration-500 ${
+                    index === currentSlide ? "opacity-100" : "opacity-0"
+                  }`}
+                >
+                  <img
+                    src={banner.image}
+                    alt={banner.alt}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      // Fallback para cores do site (azul e amarelo) caso a imagem não carregue
+                      (e.target as HTMLImageElement).style.display = 'none';
+                      (e.target as HTMLImageElement).parentElement!.style.background = 
+                        `linear-gradient(135deg, ${
+                          index === 0 ? '#3B82F6' : index === 1 ? '#2563EB' : '#1D4ED8'
+                        }, ${
+                          index === 0 ? '#EAB308' : index === 1 ? '#F59E0B' : '#FBBF24'
+                        })`;
+                    }}
+                  />
+                  {/* Overlay com gradiente */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                </div>
+              ))}
+
+              {/* Botões de Navegação */}
+              <button
+                onClick={prevSlide}
+                className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 hover:bg-white rounded-full flex items-center justify-center transition-all hover:scale-110 shadow-lg"
+                aria-label="Banner anterior"
+              >
+                <ChevronLeft className="w-6 h-6 text-blue-600" />
+              </button>
+              <button
+                onClick={nextSlide}
+                className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 hover:bg-white rounded-full flex items-center justify-center transition-all hover:scale-110 shadow-lg"
+                aria-label="Próximo banner"
+              >
+                <ChevronRight className="w-6 h-6 text-blue-600" />
+              </button>
+
+              {/* Indicadores */}
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+                {banners.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentSlide(index)}
+                    className={`w-2.5 h-2.5 rounded-full transition-all ${
+                      index === currentSlide
+                        ? "bg-white w-8"
+                        : "bg-white/50 hover:bg-white/75"
+                    }`}
+                    aria-label={`Ir para banner ${index + 1}`}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
-          <h1 className="text-5xl lg:text-6xl font-bold mb-4 text-white">Clínica Mundo</h1>
-          <p className="text-2xl lg:text-3xl font-medium text-yellow-200 mb-8">Desenvolvimento Infantojuvenil</p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          <div className="text-white">
-            <div className="bg-blue-600/80 backdrop-blur-sm rounded-lg p-8 space-y-6">
-              <h2 className="text-2xl font-bold mb-4">Nosso Espaço</h2>
+        <div className="max-w-3xl mx-auto">
+          <div className="text-gray-800">
+            <div className="bg-white/90 backdrop-blur-sm rounded-lg p-8 space-y-6 shadow-2xl border border-gray-200">
               <p className="text-lg leading-relaxed">
                 Nosso espaço foi planejado para oferecer conforto e praticidade, priorizando a satisfação das famílias, 
                 a mobilidade e o bom uso do tempo.
@@ -38,66 +141,55 @@ export function HeroSection() {
                 vias da cidade.
               </p>
               
-              <div className="space-y-3 pt-4">
+              <div className="grid md:grid-cols-2 gap-4 pt-4">
                 <div className="flex items-center space-x-3">
-                  <Check className="w-6 h-6 text-yellow-300 flex-shrink-0" />
+                  <Check className="w-6 h-6 text-blue-600 flex-shrink-0" />
                   <span className="text-lg font-medium">Acesso fácil</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Check className="w-6 h-6 text-yellow-300 flex-shrink-0" />
+                  <Check className="w-6 h-6 text-blue-600 flex-shrink-0" />
                   <span className="text-lg font-medium">Espaço climatizado</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Check className="w-6 h-6 text-yellow-300 flex-shrink-0" />
+                  <Check className="w-6 h-6 text-blue-600 flex-shrink-0" />
                   <span className="text-lg font-medium">Equipe interdisciplinar</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Check className="w-6 h-6 text-yellow-300 flex-shrink-0" />
-                  <span className="text-lg font-medium">Coworking para os pais ou responsáveis</span>
+                  <Check className="w-6 h-6 text-blue-600 flex-shrink-0" />
+                  <span className="text-lg font-medium">Coworking para os pais</span>
                 </div>
               </div>
 
-              <div className="pt-6 border-t border-white/30">
-                <p className="text-lg italic text-yellow-200">
+              <div className="pt-6 border-t border-gray-200">
+                <p className="text-lg italic text-blue-600 text-center font-medium">
                   "Ambientes climatizados, atendimento qualificado e coworking para transformar espera em produtividade"
                 </p>
               </div>
             </div>
             
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 onClick={() => window.open("https://api.whatsapp.com/send?phone=553175557435", "_blank")} 
                 size="lg" 
-                className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-semibold text-lg px-8 py-6"
+                className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-semibold text-lg px-8 py-6 shadow-xl hover:shadow-2xl transition-all hover:scale-105"
               >
+                <i className="fa-brands fa-whatsapp mr-2 text-xl"></i>
                 Agendar Consulta
               </Button>
               <Button 
-                onClick={() => window.open("https://maps.app.goo.gl/your-google-maps-link", "_blank")} 
+                onClick={() => {
+                  const locationSection = document.getElementById('localizacao');
+                  if (locationSection) {
+                    locationSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }} 
                 size="lg" 
                 variant="outline"
-                className="bg-white/90 hover:bg-white text-blue-900 font-semibold text-lg px-8 py-6 border-2 border-white"
+                className="bg-white/90 hover:bg-white text-blue-900 font-semibold text-lg px-8 py-6 border-2 border-white shadow-xl hover:shadow-2xl transition-all hover:scale-105"
               >
                 <MapPin className="w-5 h-5 mr-2" />
                 Como Chegar
               </Button>
-            </div>
-          </div>
-
-          <div className="relative">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-              <div className="aspect-square bg-gradient-to-br from-yellow-300 to-orange-400 rounded-xl flex items-center justify-center">
-              <iframe
-                title="Localização Clínica Mundo"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d910.9624076955577!2d-43.93632475295739!3d-19.94031108092522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa699219e14f879%3A0x2d4cacc877f17bf1!2sCl%C3%ADnica%20Mundo%20-%20Desenvolvimento%20Infantil!5e0!3m2!1spt-BR!2sbr!4v1757385714350!5m2!1spt-BR!2sbr"
-                width="100%"
-                height="100%"
-                style={{ border: 0, borderRadius: "0.75rem" }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-              </div>
             </div>
           </div>
         </div>
