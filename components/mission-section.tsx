@@ -6,74 +6,53 @@ export function MissionSection() {
       <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 to-yellow-500/20"></div>
 
       <div className="relative z-10 container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            <div>
-              <h2 className="text-4xl font-bold mb-6">
-                Um espaço pensado para atender as necessidades das crianças de
-                <span className="text-yellow-300"> forma integral</span>
-              </h2>
-              <h3 className="text-2xl font-semibold text-yellow-300 mb-4">
-                em um mundo repleto de cuidados e possibilidades
-              </h3>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="flex items-start space-x-3">
-                <Heart className="w-6 h-6 text-yellow-300 flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-semibold mb-2">Cuidado Integral</h4>
-                  <p className="text-blue-100 text-sm">
-                    Atendimento multidisciplinar focado no desenvolvimento completo da criança.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-3">
-                <Users className="w-6 h-6 text-yellow-300 flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-semibold mb-2">Apoio às Famílias</h4>
-                  <p className="text-blue-100 text-sm">
-                    Suporte completo para pais e cuidadores durante todo o processo.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-3">
-                <Star className="w-6 h-6 text-yellow-300 flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-semibold mb-2">Excelência</h4>
-                  <p className="text-blue-100 text-sm">Profissionais altamente qualificados e técnicas inovadoras.</p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-3">
-                <Shield className="w-6 h-6 text-yellow-300 flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-semibold mb-2">Ambiente Seguro</h4>
-                  <p className="text-blue-100 text-sm">
-                    Espaço acolhedor e seguro, pensado especialmente para crianças.
-                  </p>
-                </div>
-              </div>
-            </div>
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Um espaço pensado para atender as necessidades das crianças de
+              <span className="text-yellow-300"> forma integral</span>
+            </h2>
+            <h3 className="text-xl md:text-2xl font-semibold text-yellow-300">
+              em um mundo repleto de cuidados e possibilidades
+            </h3>
           </div>
 
-          <div className="relative">
-            <div className="aspect-square bg-gradient-to-br from-yellow-300 to-orange-400 rounded-full flex items-center justify-center">
-              <div className="w-4/5 h-4/5 bg-white rounded-full flex items-center justify-center">
-                <img
-                  src="./images/img12.png?height=300&width=300"
-                  alt="Criança feliz"
-                  className="w-3/4 h-3/4 object-cover rounded-full"
-                />
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div className="flex flex-col items-center text-center space-y-3 bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <Heart className="w-8 h-8 text-yellow-300 flex-shrink-0" />
+              <div>
+                <h4 className="font-semibold mb-2 text-base">Cuidado Integral</h4>
+                <p className="text-blue-100 text-sm">
+                  Atendimento multidisciplinar focado no desenvolvimento completo da criança.
+                </p>
               </div>
             </div>
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-yellow-400 rounded-full flex items-center justify-center">
-              <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center">
-                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-                  <img src="/favicon.ico" alt="Clínica Mundo Logo" className="w-10 h-10" />
-                </div>
+
+            <div className="flex flex-col items-center text-center space-y-3 bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <Users className="w-8 h-8 text-yellow-300 flex-shrink-0" />
+              <div>
+                <h4 className="font-semibold mb-2 text-base">Apoio às Famílias</h4>
+                <p className="text-blue-100 text-sm">
+                  Suporte completo para pais e cuidadores durante todo o processo.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center text-center space-y-3 bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <Star className="w-8 h-8 text-yellow-300 flex-shrink-0" />
+              <div>
+                <h4 className="font-semibold mb-2 text-base">Excelência</h4>
+                <p className="text-blue-100 text-sm">Profissionais altamente qualificados e técnicas inovadoras.</p>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center text-center space-y-3 bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <Shield className="w-8 h-8 text-yellow-300 flex-shrink-0" />
+              <div>
+                <h4 className="font-semibold mb-2 text-base">Ambiente Seguro</h4>
+                <p className="text-blue-100 text-sm">
+                  Espaço acolhedor e seguro, pensado especialmente para crianças.
+                </p>
               </div>
             </div>
           </div>

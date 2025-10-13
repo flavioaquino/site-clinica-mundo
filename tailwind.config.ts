@@ -13,6 +13,7 @@ const config: Config = {
   theme: {
   	extend: {
   		colors: {
+  			'clinica-blue': '#0177B5',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {

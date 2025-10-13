@@ -88,29 +88,6 @@ export function LocationSection() {
                   </Button>
                 </div>
               </div>
-
-              {/* Diferenciais de Localização */}
-              <div className="bg-gradient-to-br from-blue-600 to-blue-500 rounded-2xl p-6 text-white shadow-lg">
-                <h4 className="font-bold text-lg mb-4">Por que nossa localização é especial?</h4>
-                <ul className="space-y-3">
-                  <li className="flex items-start space-x-2">
-                    <span className="text-yellow-300 mt-1">✓</span>
-                    <span>Próximo a shoppings, restaurantes e hotéis</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-yellow-300 mt-1">✓</span>
-                    <span>Fácil acesso às principais vias da cidade</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-yellow-300 mt-1">✓</span>
-                    <span>Estacionamento disponível na região</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-yellow-300 mt-1">✓</span>
-                    <span>Transporte público acessível</span>
-                  </li>
-                </ul>
-              </div>
             </div>
 
             {/* Mapa Interativo */}

@@ -30,18 +30,16 @@ export function Header() {
 
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
-      <div className="container mx-auto px-5 py-4">
+      <div className="container mx-auto px-5 py-2">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-4">
-            <div className="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-r from-blue-500 to-yellow-500 rounded-full flex items-center justify-center shadow-lg">
-              <div className="w-12 h-12 md:w-14 md:h-14 bg-white rounded-full flex items-center justify-center">
-                <img src="/favicon.ico" alt="Clínica Mundo Logo" className="w-9 h-9 md:w-11 md:h-11" />
-              </div>
-            </div>
-            <div className="hidden md:flex flex-col">
-              <span className="text-xl md:text-2xl font-bold text-blue-600">Clínica Mundo</span>
-              <span className="text-xs md:text-sm text-gray-600 font-medium">Desenvolvimento Infantojuvenil</span>
+            <div className="h-20 md:h-24">
+              <img 
+                src="/images/logo-header.png" 
+                alt="Clínica Mundo Logo" 
+                className="h-full w-auto object-contain"
+              />
             </div>
           </div>
 

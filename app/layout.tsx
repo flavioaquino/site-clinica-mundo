@@ -1,11 +1,17 @@
 import type { Metadata } from 'next'
-import { Archivo } from 'next/font/google'
+import { Archivo, Mouse_Memoirs } from 'next/font/google'
 import './globals.css'
 
 const archivo = Archivo({ 
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700', '800'],
   variable: '--font-archivo',
+})
+
+const mouseMemoirs = Mouse_Memoirs({
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--font-mouse-memoirs',
 })
 
 export const metadata: Metadata = {
@@ -27,7 +33,7 @@ export default function RootLayout({
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         />
       </head>
-      <body className={archivo.className}>{children}</body>
+      <body className={`${archivo.className} ${mouseMemoirs.variable}`}>{children}</body>
     </html>
   )
 }

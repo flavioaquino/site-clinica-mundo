@@ -131,42 +131,6 @@ export function HeroSection() {
 
         <div className="max-w-3xl mx-auto">
           <div className="text-gray-800">
-            <div className="bg-white/90 backdrop-blur-sm rounded-lg p-8 space-y-6 shadow-2xl border border-gray-200">
-              <p className="text-lg leading-relaxed">
-                Nosso espaço foi planejado para oferecer conforto e praticidade, priorizando a satisfação das famílias, 
-                a mobilidade e o bom uso do tempo.
-              </p>
-              <p className="text-lg leading-relaxed">
-                No coração da Savassi - BH, perto de shoppings, restaurantes e hotéis, com acesso fácil às principais 
-                vias da cidade.
-              </p>
-              
-              <div className="grid md:grid-cols-2 gap-4 pt-4">
-                <div className="flex items-center space-x-3">
-                  <Check className="w-6 h-6 text-blue-600 flex-shrink-0" />
-                  <span className="text-lg font-medium">Acesso fácil</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Check className="w-6 h-6 text-blue-600 flex-shrink-0" />
-                  <span className="text-lg font-medium">Espaço climatizado</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Check className="w-6 h-6 text-blue-600 flex-shrink-0" />
-                  <span className="text-lg font-medium">Equipe interdisciplinar</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Check className="w-6 h-6 text-blue-600 flex-shrink-0" />
-                  <span className="text-lg font-medium">Coworking para os pais</span>
-                </div>
-              </div>
-
-              <div className="pt-6 border-t border-gray-200">
-                <p className="text-lg italic text-blue-600 text-center font-medium">
-                  "Ambientes climatizados, atendimento qualificado e coworking para transformar espera em produtividade"
-                </p>
-              </div>
-            </div>
-            
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 onClick={() => window.open("https://api.whatsapp.com/send?phone=553175557435", "_blank")} 

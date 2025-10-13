@@ -69,10 +69,10 @@ export function SpecialtiesSection() {
           {specialties.map((specialty, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-blue-50 to-yellow-50 rounded-lg p-6 hover:shadow-lg transition-shadow"
+              className="bg-white rounded-lg p-6 hover:shadow-lg transition-shadow border border-gray-200"
             >
               <div className="flex items-center mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-yellow-500 rounded-full flex items-center justify-center mr-3">
+                <div className="w-8 h-8 bg-[#0177B5] rounded-full flex items-center justify-center mr-3">
                   <specialty.icon className="w-4 h-4 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-800">{specialty.title}</h3>
