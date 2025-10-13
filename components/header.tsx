@@ -45,20 +45,20 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-6">
-            <nav className="flex items-center space-x-6">
-              <a href="#inicio" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <nav className="hidden md:flex space-x-8">
+              <a href="#inicio" className="text-gray-700 hover:text-[#0177B5] transition-colors">
                 Início
               </a>
-              <a href="#especialidades" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <a href="#especialidades" className="text-gray-700 hover:text-[#0177B5] transition-colors">
                 Especialidades
               </a>
-              <a href="#espaco" className="text-gray-700 hover:text-blue-600 transition-colors">
-                Nosso Espaço
+              <a href="#espaco" className="text-gray-700 hover:text-[#0177B5] transition-colors">
+                Espaço
               </a>
-              <a href="#equipe" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <a href="#equipe" className="text-gray-700 hover:text-[#0177B5] transition-colors">
                 Equipe
               </a>
-              <a href="#contato" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <a href="#contato" className="text-gray-700 hover:text-[#0177B5] transition-colors">
                 Contato
               </a>
             </nav>
@@ -71,7 +71,7 @@ export function Header() {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center transition-all ${social.color} hover:scale-110`}
+                  className={`w-10 h-10 rounded-full bg-[#0177B5] text-white flex items-center justify-center transition-all ${social.color} hover:scale-110`}
                   aria-label={social.name}
                 >
                   {social.icon}
@@ -90,7 +90,7 @@ export function Header() {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`w-9 h-9 rounded-full bg-blue-600 text-white flex items-center justify-center transition-all ${social.color}`}
+                  className={`w-9 h-9 rounded-full bg-[#0177B5] text-white flex items-center justify-center transition-all ${social.color}`}
                   aria-label={social.name}
                 >
                   {social.icon}
@@ -103,7 +103,7 @@ export function Header() {
               variant="ghost"
               size="icon"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-blue-600"
+              className="text-[#0177B5]"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </Button>
@@ -116,35 +116,35 @@ export function Header() {
             <div className="flex flex-col space-y-3">
               <a
                 href="#inicio"
-                className="text-gray-700 hover:text-blue-600 py-2 px-4 rounded-lg hover:bg-blue-50 transition-colors"
+                className="text-gray-700 hover:text-[#0177B5] py-2 px-4 rounded-lg hover:bg-[#0177B5]/10 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Início
               </a>
               <a
                 href="#especialidades"
-                className="text-gray-700 hover:text-blue-600 py-2 px-4 rounded-lg hover:bg-blue-50 transition-colors"
+                className="text-gray-700 hover:text-[#0177B5] py-2 px-4 rounded-lg hover:bg-[#0177B5]/10 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Especialidades
               </a>
               <a
                 href="#espaco"
-                className="text-gray-700 hover:text-blue-600 py-2 px-4 rounded-lg hover:bg-blue-50 transition-colors"
+                className="text-gray-700 hover:text-[#0177B5] py-2 px-4 rounded-lg hover:bg-[#0177B5]/10 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Nosso Espaço
               </a>
               <a
                 href="#equipe"
-                className="text-gray-700 hover:text-blue-600 py-2 px-4 rounded-lg hover:bg-blue-50 transition-colors"
+                className="text-gray-700 hover:text-[#0177B5] py-2 px-4 rounded-lg hover:bg-[#0177B5]/10 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Equipe
               </a>
               <a
                 href="#contato"
-                className="text-gray-700 hover:text-blue-600 py-2 px-4 rounded-lg hover:bg-blue-50 transition-colors"
+                className="text-gray-700 hover:text-[#0177B5] py-2 px-4 rounded-lg hover:bg-[#0177B5]/10 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Contato

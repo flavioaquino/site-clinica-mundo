@@ -100,14 +100,14 @@ export function HeroSection() {
                 className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 hover:bg-white rounded-full flex items-center justify-center transition-all hover:scale-110 shadow-lg"
                 aria-label="Banner anterior"
               >
-                <ChevronLeft className="w-6 h-6 text-blue-600" />
+                <ChevronLeft className="w-6 h-6 text-[#0177B5]" />
               </button>
               <button
                 onClick={nextSlide}
                 className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 hover:bg-white rounded-full flex items-center justify-center transition-all hover:scale-110 shadow-lg"
                 aria-label="Próximo banner"
               >
-                <ChevronRight className="w-6 h-6 text-blue-600" />
+                <ChevronRight className="w-6 h-6 text-[#0177B5]" />
               </button>
 
               {/* Indicadores */}
@@ -135,7 +135,7 @@ export function HeroSection() {
               <Button 
                 onClick={() => window.open("https://api.whatsapp.com/send?phone=553175557435", "_blank")} 
                 size="lg" 
-                className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-semibold text-lg px-8 py-6 shadow-xl hover:shadow-2xl transition-all hover:scale-105"
+                className="bg-yellow-500 hover:bg-yellow-600 text-[#0177B5] font-semibold text-lg px-8 py-6 shadow-xl hover:shadow-2xl transition-all hover:scale-105"
               >
                 <i className="fa-brands fa-whatsapp mr-2 text-xl"></i>
                 Agendar Consulta
@@ -149,7 +149,7 @@ export function HeroSection() {
                 }} 
                 size="lg" 
                 variant="outline"
-                className="bg-white/90 hover:bg-white text-blue-900 font-semibold text-lg px-8 py-6 border-2 border-white shadow-xl hover:shadow-2xl transition-all hover:scale-105"
+                className="bg-white/90 hover:bg-white text-[#0177B5] font-semibold text-lg px-8 py-6 border-2 border-white shadow-xl hover:shadow-2xl transition-all hover:scale-105"
               >
                 <MapPin className="w-5 h-5 mr-2" />
                 Como Chegar

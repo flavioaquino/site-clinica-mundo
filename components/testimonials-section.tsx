@@ -70,10 +70,10 @@ export function TestimonialsSection() {
   const visibleTestimonials = testimonials.slice(currentIndex, currentIndex + itemsPerPage)
 
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-50 to-yellow-50">
+    <section className="py-20 bg-gradient-to-br from-[#0177B5]/5 to-yellow-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-blue-600 mb-4">
+          <h2 className="text-4xl font-bold text-[#0177B5] mb-4">
             O Que Dizem as Famílias
           </h2>
           <p className="text-lg text-gray-600">
@@ -94,7 +94,7 @@ export function TestimonialsSection() {
                   "{testimonial.text}"
                 </p>
                 <div className="border-t pt-4">
-                  <p className="font-semibold text-blue-600">{testimonial.name}</p>
+                  <p className="font-semibold text-[#0177B5]">{testimonial.name}</p>
                   <p className="text-sm text-gray-500">{testimonial.relation}</p>
                 </div>
               </Card>
@@ -107,9 +107,9 @@ export function TestimonialsSection() {
                 onClick={prevSlide}
                 variant="outline"
                 size="icon"
-                className="rounded-full bg-white hover:bg-blue-50 border-blue-300"
+                className="rounded-full bg-white hover:bg-[#0177B5]/10 border-[#0177B5]/30"
               >
-                <ChevronLeft className="w-6 h-6 text-blue-600" />
+                <ChevronLeft className="w-6 h-6 text-[#0177B5]" />
               </Button>
               
               <div className="flex space-x-2">
@@ -119,8 +119,8 @@ export function TestimonialsSection() {
                     onClick={() => setCurrentIndex(index * itemsPerPage)}
                     className={`w-3 h-3 rounded-full transition-all duration-300 ${
                       Math.floor(currentIndex / itemsPerPage) === index
-                        ? "bg-blue-600 w-8"
-                        : "bg-blue-300"
+                        ? "bg-[#0177B5] w-8"
+                        : "bg-[#0177B5]/30"
                     }`}
                     aria-label={`Ir para página ${index + 1}`}
                   />
@@ -131,9 +131,9 @@ export function TestimonialsSection() {
                 onClick={nextSlide}
                 variant="outline"
                 size="icon"
-                className="rounded-full bg-white hover:bg-blue-50 border-blue-300"
+                className="rounded-full bg-white hover:bg-[#0177B5]/10 border-[#0177B5]/30"
               >
-                <ChevronRight className="w-6 h-6 text-blue-600" />
+                <ChevronRight className="w-6 h-6 text-[#0177B5]" />
               </Button>
             </div>
           )}
@@ -145,7 +145,7 @@ export function TestimonialsSection() {
           </p>
           <Button 
             onClick={() => window.open("https://api.whatsapp.com/send?phone=553175557435&text=Gostaria%20de%20compartilhar%20meu%20depoimento", "_blank")}
-            className="bg-blue-600 hover:bg-blue-700 text-white"
+            className="bg-[#0177B5] hover:bg-[#0177B5]/90 text-white"
           >
             Enviar Depoimento
           </Button>

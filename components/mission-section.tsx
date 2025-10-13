@@ -1,9 +1,9 @@
 import { Heart, Users, Star, Shield } from "lucide-react"
 
-export function MissionSection() {
+export default function MissionSection() {
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-800 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 to-yellow-500/20"></div>
+    <section className="py-20 bg-gradient-to-br from-[#0177B5] to-[#0177B5]/80 text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0177B5]/90 to-yellow-500/20"></div>
 
       <div className="relative z-10 container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
@@ -59,7 +59,7 @@ export function MissionSection() {
         </div>
 
         <div className="mt-16 text-center">
-          <p className="text-lg text-blue-100 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg text-white/90 max-w-4xl mx-auto leading-relaxed">
             Alegria e realização são os sentimentos compartilhados com a materialização da Mundo. A minha trajetória
             como Fisioterapeuta Neurofuncional Pediátrica, área à qual dedico mais de 13 anos da minha vida, sempre foi
             pautada na realização de sonho que sempre foi oferecer o melhor atendimento possível às famílias que

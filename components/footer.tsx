@@ -22,7 +22,7 @@ export function Footer() {
                 href="https://www.instagram.com/clinica.mundo/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
+                className="w-10 h-10 bg-[#0177B5] rounded-full flex items-center justify-center hover:bg-[#0177B5]/90 transition-colors"
               >
                 <Instagram className="w-5 h-5" />
               </a>
@@ -30,7 +30,7 @@ export function Footer() {
                 href="http://wa.me/553175557435"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
+                className="w-10 h-10 bg-[#0177B5] rounded-full flex items-center justify-center hover:bg-[#0177B5]/90 transition-colors"
               >
                 <i className="fa-brands fa-whatsapp text-xl"></i>
               </a>

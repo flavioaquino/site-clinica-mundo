@@ -27,18 +27,18 @@ export function SpaceSection() {
   }
 
   return (
-    <section id="espaco" className="py-20 bg-gradient-to-br from-blue-50 to-yellow-50">
+    <section id="espaco" className="py-20 bg-gradient-to-br from-[#0177B5]/5 to-yellow-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <div className="flex justify-center mb-4">
             <div className="flex space-x-1">
               {[...Array(5)].map((_, i) => (
-                <div key={i} className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                <div key={i} className="w-2 h-2 bg-[#0177B5] rounded-full"></div>
               ))}
             </div>
           </div>
           <h2 className="text-4xl font-bold text-gray-800 mb-4">
-            Nosso <span className="text-blue-500">Espaço</span>
+            Nosso <span className="text-[#0177B5]">Espaço</span>
           </h2>
         </div>
 

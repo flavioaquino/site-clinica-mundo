@@ -5,12 +5,12 @@ import { Button } from "@/components/ui/button"
 
 export function LocationSection() {
   return (
-    <section id="localizacao" className="py-20 bg-gradient-to-br from-blue-50 to-white">
+    <section id="localizacao" className="py-20 bg-gradient-to-br from-[#0177B5]/5 to-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <div className="flex items-center justify-center space-x-2 mb-4">
-            <MapPin className="w-8 h-8 text-blue-600" />
-            <h2 className="text-4xl font-bold text-blue-600">Nossa Localização</h2>
+            <MapPin className="w-8 h-8 text-[#0177B5]" />
+            <h2 className="text-4xl font-bold text-[#0177B5]">Nossa Localização</h2>
           </div>
           <p className="text-lg text-gray-600">
             No coração da Savassi - Belo Horizonte, MG
@@ -29,8 +29,8 @@ export function LocationSection() {
                 <div className="space-y-6">
                   {/* Endereço */}
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-6 h-6 text-blue-600" />
+                    <div className="w-12 h-12 bg-[#0177B5]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-6 h-6 text-[#0177B5]" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-800 mb-1">Endereço</h4>
@@ -80,7 +80,7 @@ export function LocationSection() {
                 <div className="mt-8 pt-6 border-t">
                   <Button
                     onClick={() => window.open("https://www.google.com/maps/place/Cl%C3%ADnica+Mundo+-+Desenvolvimento+Infantil/@-19.9403111,-19.9403111,16z/data=!4m6!3m5!1s0xa699219e14f879:0x2d4cacc877f17bf1!8m2!3d-19.9403111!4d-43.9363248!16s%2Fg%2F11t_3wk0hd", "_blank")}
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white text-lg py-6"
+                    className="w-full bg-[#0177B5] hover:bg-[#0177B5]/90 text-white text-lg py-6"
                     size="lg"
                   >
                     <MapPin className="w-5 h-5 mr-2" />

@@ -60,8 +60,8 @@ export function CertificationsSection() {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-blue-600 mb-4">
-            Certificações e Convênios
+          <h2 className="text-4xl font-bold text-[#0177B5] mb-4">
+            Certificações e Credenciamentos
           </h2>
           <p className="text-lg text-gray-600">
             Qualidade reconhecida e parcerias que facilitam seu atendimento
@@ -73,15 +73,15 @@ export function CertificationsSection() {
           {certificates.length > 0 && (
             <div>
               <div className="flex items-center justify-center mb-6">
-                <Award className="w-8 h-8 text-blue-600 mr-3" />
+                <Award className="w-8 h-8 text-[#0177B5] mr-3" />
                 <h3 className="text-2xl font-bold text-gray-800">Certificações Profissionais</h3>
               </div>
               <div className="grid md:grid-cols-3 gap-6">
                 {certificates.map((cert) => (
-                  <Card key={cert.id} className="p-6 text-center hover:shadow-xl transition-shadow duration-300 border-2 border-blue-100">
+                  <Card key={cert.id} className="p-6 text-center hover:shadow-xl transition-shadow duration-300 border-2 border-[#0177B5]/10">
                     <div className="flex justify-center mb-4">
-                      <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
-                        <Award className="w-8 h-8 text-blue-600" />
+                      <div className="w-16 h-16 bg-[#0177B5]/10 rounded-full flex items-center justify-center">
+                        <Award className="w-8 h-8 text-[#0177B5]" />
                       </div>
                     </div>
                     <h4 className="font-semibold text-gray-800 mb-2">{cert.name}</h4>
@@ -123,7 +123,7 @@ export function CertificationsSection() {
                     href="https://api.whatsapp.com/send?phone=553175557435" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-blue-600 hover:text-blue-700 font-semibold ml-1"
+                    className="text-[#0177B5] hover:text-[#0177B5]/80 font-semibold ml-1"
                   >
                     Entre em contato
                   </a>
@@ -159,7 +159,7 @@ export function CertificationsSection() {
         </div>
 
         {/* Call to Action */}
-        <div className="mt-12 text-center bg-gradient-to-r from-blue-50 to-yellow-50 rounded-2xl p-8">
+        <div className="mt-12 text-center bg-gradient-to-r from-[#0177B5]/5 to-yellow-50 rounded-2xl p-8">
           <h3 className="text-2xl font-bold text-gray-800 mb-4">
             Atendimento de Excelência
           </h3>
