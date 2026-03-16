@@ -61,9 +61,8 @@ export default function MissionSection() {
         <div className="mt-16 text-center">
           <p className="text-lg text-white/90 max-w-4xl mx-auto leading-relaxed">
             Alegria e realização são os sentimentos compartilhados com a materialização da Mundo. A minha trajetória
-            como Fisioterapeuta Neurofuncional Pediátrica, área à qual dedico mais de 13 anos da minha vida, sempre foi
-            pautada na realização de sonho que sempre foi oferecer o melhor atendimento possível às famílias que
-            depositam sua confiança em meu trabalho.
+            como Fisioterapeuta Neurofuncional Pediátrica sempre foi pautada na realização de um sonho: oferecer o
+            melhor atendimento possível às famílias que depositam sua confiança em meu trabalho.
           </p>
         </div>
       </div>

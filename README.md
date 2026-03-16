@@ -141,10 +141,10 @@ Ver **[GUIA-PERSONALIZACAO.md](./GUIA-PERSONALIZACAO.md)** para mais detalhes.
 
 ## 📞 Contato
 
-- **WhatsApp**: (31) 7555-7435
-- **Email**: contato@clinicamundo.com.br
+- **WhatsApp**: (31) 99278-9423
+- **Email**: mundodesenvolvimentoinfantil@gmail.com
 - **Instagram**: [@clinica.mundo](https://www.instagram.com/clinica.mundo/)
-- **Localização**: Savassi - Belo Horizonte, MG
+- **Localização**: Av. do Contorno, 6321, 6º andar - Bairro São Pedro, Belo Horizonte - MG
 
 ## 🚀 Deploy
 

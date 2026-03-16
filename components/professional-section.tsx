@@ -18,7 +18,7 @@ export function ProfessionalSection() {
                   <Clock className="w-6 h-6 text-blue-600" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-blue-600 mb-2">Mais de 13 anos de experiência</h4>
+                  <h4 className="text-xl font-bold text-blue-600 mb-2">Experiência consolidada</h4>
                   <p className="text-gray-700">
                     Uma trajetória marcada pelo cuidado, inovação e resultados excepcionais no desenvolvimento infantil.
                   </p>
@@ -60,9 +60,6 @@ export function ProfessionalSection() {
                 alt="Tábata Camelo - Fisioterapeuta"
                 className="w-full h-full object-cover"
               />
-            </div>
-            <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-yellow-500 rounded-full flex items-center justify-center">
-              <span className="text-blue-900 font-bold text-lg">13+</span>
             </div>
           </div>
         </div>

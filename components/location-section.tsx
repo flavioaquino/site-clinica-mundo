@@ -13,7 +13,7 @@ export function LocationSection() {
             <h2 className="text-4xl font-bold text-[#0177B5]">Nossa Localização</h2>
           </div>
           <p className="text-lg text-gray-600">
-            No coração da Savassi - Belo Horizonte, MG
+            Avenida do Contorno, 6321 - 6º andar, Bairro São Pedro, Belo Horizonte - MG
           </p>
         </div>
 
@@ -34,9 +34,9 @@ export function LocationSection() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-800 mb-1">Endereço</h4>
-                      <p className="text-gray-600">Savassi, Belo Horizonte - MG</p>
+                      <p className="text-gray-600">Av. do Contorno, 6321 - 6º andar</p>
                       <p className="text-sm text-gray-500 mt-1">
-                        Localização privilegiada com fácil acesso
+                        Bairro São Pedro, Belo Horizonte - MG
                       </p>
                     </div>
                   </div>
@@ -48,9 +48,9 @@ export function LocationSection() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-800 mb-1">Telefone / WhatsApp</h4>
-                      <p className="text-gray-600">(31) 7555-7435</p>
+                      <p className="text-gray-600">(31) 99278-9423</p>
                       <Button
-                        onClick={() => window.open("https://api.whatsapp.com/send?phone=553175557435", "_blank")}
+                        onClick={() => window.open("https://api.whatsapp.com/send?phone=5531992789423", "_blank")}
                         className="mt-2 bg-green-500 hover:bg-green-600 text-white"
                         size="sm"
                       >

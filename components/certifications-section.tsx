@@ -120,7 +120,7 @@ export function CertificationsSection() {
                 <p className="text-gray-600">
                   Consulte-nos sobre outros convênios • 
                   <a 
-                    href="https://api.whatsapp.com/send?phone=553175557435" 
+                    href="https://api.whatsapp.com/send?phone=5531992789423" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-[#0177B5] hover:text-[#0177B5]/80 font-semibold ml-1"

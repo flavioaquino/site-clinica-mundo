@@ -11,7 +11,7 @@ export function Header() {
     {
       name: "WhatsApp",
       icon: <Phone className="w-5 h-5" />,
-      url: "https://api.whatsapp.com/send?phone=553175557435",
+      url: "https://api.whatsapp.com/send?phone=5531992789423",
       color: "hover:bg-green-500"
     },
     {

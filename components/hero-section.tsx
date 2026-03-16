@@ -1,10 +1,19 @@
 "use client"
-import { MapPin, Check, ChevronLeft, ChevronRight } from "lucide-react"
+import { MapPin, ChevronLeft, ChevronRight, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogFooter,
+} from "@/components/ui/dialog"
 import { useState, useEffect } from "react"
 
 export function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [isMascotOpen, setIsMascotOpen] = useState(false)
 
   // Imagens do carrossel - substitua pelos caminhos das imagens reais
   // 
@@ -19,17 +28,17 @@ export function HeroSection() {
   const banners = [
     {
       id: 1,
-      image: "/images/banner1.jpg",
+      image: "/images/banner1.jpeg",
       alt: "Banner 1 - Clínica Mundo"
     },
     {
       id: 2,
-      image: "/images/banner2.jpg",
+      image: "/images/banner2.jpeg",
       alt: "Banner 2 - Desenvolvimento Infantil"
     },
     {
       id: 3,
-      image: "/images/banner3.jpg",
+      image: "/images/banner3.jpeg",
       alt: "Banner 3 - Nosso Espaço"
     }
   ]
@@ -42,6 +51,12 @@ export function HeroSection() {
     return () => clearInterval(timer)
   }, [banners.length])
 
+  // Abre o modal do mascote quando a página é carregada
+  useEffect(() => {
+    const timer = window.setTimeout(() => setIsMascotOpen(true), 800)
+    return () => window.clearTimeout(timer)
+  }, [])
+
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % banners.length)
   }
@@ -51,22 +66,73 @@ export function HeroSection() {
   }
 
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center bg-white">
+      <section id="inicio" className="relative min-h-screen flex items-center bg-white overflow-x-hidden">
+      <Dialog open={isMascotOpen} onOpenChange={setIsMascotOpen}>
+        <DialogContent className="overflow-hidden border-0 bg-gradient-to-br from-[#EAF7FF] via-white to-[#FFF9E8] p-0 sm:max-w-[560px]">
+          <div className="relative px-6 pb-6 pt-8 sm:px-8 sm:pb-8">
+            <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-[#38BDF8]/20 blur-2xl" aria-hidden="true" />
+            <div className="absolute -bottom-8 -left-8 h-36 w-36 rounded-full bg-[#FACC15]/25 blur-2xl" aria-hidden="true" />
+
+            <DialogHeader className="relative z-10 text-center sm:text-center">
+              <div className="mx-auto mb-3 inline-flex items-center gap-2 rounded-full border border-[#0177B5]/20 bg-white/80 px-3 py-1 text-xs font-semibold text-[#0177B5]">
+                <Sparkles className="h-3.5 w-3.5" />
+                Seu novo melhor amigo chegou
+              </div>
+              <DialogTitle className="text-3xl font-black text-[#015A89]">Seja bem vindo!</DialogTitle>
+              <DialogDescription className="mx-auto mt-2 max-w-md text-[15px] leading-relaxed text-slate-700">
+                Nosso mascote quer ajudar você a agendar em segundos. Toque no botão e fale com a nossa equipe pelo WhatsApp.
+              </DialogDescription>
+            </DialogHeader>
+
+            <div className="relative z-10 mt-4 flex flex-col items-center gap-3">
+              <div className="relative">
+                <div className="absolute inset-0 scale-110 rounded-full bg-[#0177B5]/15 blur-xl" aria-hidden="true" />
+                <img
+                  src="/images/mascote.png"
+                  alt="Mascote Clinica Mundo"
+                  className="relative h-44 w-44 object-contain drop-shadow-[0_16px_22px_rgba(1,119,181,0.25)] animate-mascot-bounce"
+                />
+              </div>
+              <p className="max-w-md text-center text-lg font-semibold text-[#0B3B5A]">
+                Agende sua consulta agora e garanta um atendimento cheio de cuidado.
+              </p>
+            </div>
+
+            <DialogFooter className="relative z-10 mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
+              <Button
+                onClick={() => window.open("https://api.whatsapp.com/send?phone=5531992789423", "_blank")}
+                className="h-12 rounded-xl bg-green-500 px-6 text-base font-bold shadow-lg shadow-green-500/30 hover:bg-green-600"
+              >
+                <i className="fa-brands fa-whatsapp mr-2 text-xl"></i>
+                Agendar Consulta
+              </Button>
+              <Button
+                variant="outline"
+                onClick={() => setIsMascotOpen(false)}
+                className="h-12 rounded-xl border-[#0177B5]/30 bg-white/70 px-6 text-[#015A89] hover:bg-white"
+              >
+                Agora não
+              </Button>
+            </DialogFooter>
+          </div>
+        </DialogContent>
+      </Dialog>
+
       <div className="absolute inset-0">
         <div
           className="w-full h-full bg-cover bg-center opacity-20"
           style={{
-            backgroundImage: "url('/images/image.png?height=800&width=1200')",
+            backgroundImage: "url('/images/image.png')",
           }}
         ></div>
       </div>
 
-      <div className="relative z-10 container mx-auto px-4 py-20">
+      <div className="relative z-10 w-full px-4 py-20 overflow-hidden">
         {/* Carrossel de Banners */}
-        <div className="max-w-5xl mx-auto mb-8">
-          <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl">
+        <div className="relative mb-8">
+          <div className="w-screen sm:w-full lg:max-w-6xl lg:mx-auto -mx-4 sm:mx-0 relative bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl">
             {/* Imagens do Carrossel */}
-            <div className="relative aspect-[21/9] md:aspect-[16/6] lg:aspect-[21/7]">
+            <div className="relative aspect-[21/9] max-h-[260px] sm:max-h-[320px] md:max-h-[420px] lg:max-h-[520px]">
               {banners.map((banner, index) => (
                 <div
                   key={banner.id}
@@ -77,7 +143,7 @@ export function HeroSection() {
                   <img
                     src={banner.image}
                     alt={banner.alt}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain lg:object-cover"
                     onError={(e) => {
                       // Fallback para cores do site (azul e amarelo) caso a imagem não carregue
                       (e.target as HTMLImageElement).style.display = 'none';
@@ -133,7 +199,7 @@ export function HeroSection() {
           <div className="text-gray-800">
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
-                onClick={() => window.open("https://api.whatsapp.com/send?phone=553175557435", "_blank")} 
+                onClick={() => window.open("https://api.whatsapp.com/send?phone=5531992789423", "_blank")} 
                 size="lg" 
                 className="bg-yellow-500 hover:bg-yellow-600 text-[#0177B5] font-semibold text-lg px-8 py-6 shadow-xl hover:shadow-2xl transition-all hover:scale-105"
               >

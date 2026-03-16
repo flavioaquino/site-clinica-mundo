@@ -144,7 +144,7 @@ export function TestimonialsSection() {
             Quer compartilhar sua experiência?
           </p>
           <Button 
-            onClick={() => window.open("https://api.whatsapp.com/send?phone=553175557435&text=Gostaria%20de%20compartilhar%20meu%20depoimento", "_blank")}
+            onClick={() => window.open("https://api.whatsapp.com/send?phone=5531992789423&text=Gostaria%20de%20compartilhar%20meu%20depoimento", "_blank")}
             className="bg-[#0177B5] hover:bg-[#0177B5]/90 text-white"
           >
             Enviar Depoimento

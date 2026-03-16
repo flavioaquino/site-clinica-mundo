@@ -5,47 +5,61 @@ export function SpecialtiesSection() {
     {
       icon: Stethoscope,
       title: "Fisioterapia",
-      items: ["Neurológica", "Ortopédica", "Osteopatia", "Respiratória", "Therasuit", "Neuromodulação"],
+      tags: ["Ortopédica", "Neuromodulação", "Therasuit", "BOBATH", "Respiratória", "RTA"],
+      description:
+        "A fisioterapia avalia e trata bebês e crianças com alterações neurológicas que afetam o desenvolvimento motor. Utiliza técnicas específicas para estimular habilidades, promover autonomia e melhorar a qualidade de vida.",
     },
     {
       icon: Ear,
       title: "Fonoaudiologia",
-      items: ["ABA", "Estimulação Precoce", "Fala e Linguagem", "Disfagia"],
-    },
-    {
-      icon: Heart,
-      title: "Terapia Ocupacional",
-      items: [],
-    },
-    {
-      icon: Brain,
-      title: "Psicologia",
-      items: ["ABA", "TCC", "Assistente Terapêutico"],
-    },
-    {
-      icon: Brain,
-      title: "Neuropsicopedagogia",
-      items: [],
-    },
-    {
-      icon: Brain,
-      title: "Avaliação Neuropsicológica",
-      items: [],
-    },
-    {
-      icon: Apple,
-      title: "Nutrição",
-      items: ["Terapia Alimentar", "Seletividade", "Dietoterapia"],
+      tags: ["ABA", "Disfagia", "CAA"],
+      description:
+        "A fonoaudiologia avalia, previne e auxilia em dificuldades na fala, linguagem, comunicação, audição e alimentação infantil. Desenvolve habilidades comunicativas e orais, promovendo crescimento saudável e melhor desempenho da criança no dia a dia.",
     },
     {
       icon: Music,
       title: "Musicoterapia",
-      items: [],
+      tags: ["Neurológica", "Comportamental"],
+      description:
+        "A musicoterapia utiliza som, ritmo, melodia e movimento para estimular o desenvolvimento cognitivo, emocional, motor e social da criança, favorecendo comunicação, expressão de sentimentos, interação social e fortalecimento de vínculos.",
+    },
+    {
+      icon: Brain,
+      title: "Psicologia",
+      tags: ["TCC", "ABA"],
+      description:
+        "A psicologia acompanha o desenvolvimento emocional, comportamental e social da criança, oferecendo suporte para lidar com ansiedade, medos, alterações de comportamento, desafios escolares e questões familiares, promovendo equilíbrio emocional.",
     },
     {
       icon: Heart,
       title: "Psicomotricidade",
-      items: [],
+      description:
+        "A psicomotricidade integra movimento, emoções e cognição, estimulando o desenvolvimento global da criança. Com atividades lúdicas, favorece a coordenação motora, equilíbrio, organização corporal, atenção e interação social.",
+    },
+    {
+      icon: Heart,
+      title: "Terapia Ocupacional",
+      tags: ["BOBATH", "Integração Sensorial", "ABA"],
+      description:
+        "A Terapia Ocupacional desenvolve autonomia e funcionalidade da criança nas atividades diárias. Com intervenções lúdicas, estimula habilidades motoras, sensoriais, cognitivas e sociais, favorecendo participação ativa nos contextos familiar e escolar.",
+    },
+    {
+      icon: Apple,
+      title: "Nutrição",
+      description:
+        "A Nutrição promove hábitos alimentares saudáveis e equilibrados, considerando as necessidades individuais da criança. Atua na prevenção e no acompanhamento de alterações nutricionais e alimentares, contribuindo para crescimento, desenvolvimento e qualidade de vida.",
+    },
+    {
+      icon: Brain,
+      title: "Neuropsicopedagogia",
+      description:
+        "A Neuropsicopedagogia atua nas dificuldades de aprendizagem, integrando conhecimentos sobre cérebro, comportamento e educação. Desenvolve estratégias personalizadas para estimular habilidades cognitivas, favorecer o desempenho escolar e promover autonomia no processo de aprendizagem.",
+    },
+    {
+      icon: Brain,
+      title: "Avaliação Neuropsicológica",
+      description:
+        "A Avaliação Neuropsicológica investiga habilidades cognitivas, emocionais e comportamentais da criança. Identifica dificuldades de atenção, memória, linguagem e aprendizagem, auxiliando no diagnóstico e direcionando intervenções mais adequadas.",
     },
   ]
 
@@ -77,14 +91,20 @@ export function SpecialtiesSection() {
                 </div>
                 <h3 className="text-lg font-semibold text-gray-800">{specialty.title}</h3>
               </div>
-              {specialty.items.length > 0 && (
-                <ul className="space-y-2">
-                  {specialty.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="text-gray-600 text-sm">
-                      {item}
-                    </li>
+              {specialty.tags && specialty.tags.length > 0 && (
+                <div className="flex flex-wrap gap-2 mb-3">
+                  {specialty.tags.map((tag, tagIndex) => (
+                    <span
+                      key={tagIndex}
+                      className="text-xs bg-[#0177B5]/10 text-[#0177B5] px-2 py-1 rounded-full"
+                    >
+                      {tag}
+                    </span>
                   ))}
-                </ul>
+                </div>
+              )}
+              {specialty.description && (
+                <p className="text-gray-600 text-sm">{specialty.description}</p>
               )}
             </div>
           ))}
