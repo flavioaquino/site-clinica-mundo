@@ -30,11 +30,11 @@ export function Header() {
 
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
-      <div className="container mx-auto px-5 lg:px-[2%] py-2">
+      <div className="container mx-auto px-5 lg:px-[2%]">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-4">
-            <div className="h-20 md:h-24">
+            <div className="h-25 md:h-32">
               <img 
                 src="/images/logo-header.png" 
                 alt="Clínica Mundo Logo" 
