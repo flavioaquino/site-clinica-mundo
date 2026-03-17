@@ -144,7 +144,7 @@ export function TestimonialsSection() {
             Quer compartilhar sua experiência?
           </p>
           <Button 
-            onClick={() => window.open("https://www.google.com/search?q=clinica+mundo+desenvolvimento&sca_esv=4ae20d8bd47daad1&sxsrf=ANbL-n5eOR6MEYGUqOgfH9vmPGHjkGdE_Q%3A1773760836924&ei=RHG5aZeJOOTK1sQPtKvSgAM&biw=1536&bih=730&ved=0ahUKEwiXu-eEnqeTAxVkpZUCHbSVFDAQ4dUDCBE&uact=5&oq=clinica+mundo+desenvolvimento&gs_lp=Egxnd3Mtd2l6LXNlcnAiHWNsaW5pY2EgbXVuZG8gZGVzZW52b2x2aW1lbnRvMgQQIxgnMgYQABgWGB4yBhAAGBYYHjIIEAAYgAQYogQyCBAAGIAEGKIEMggQABiABBiiBDIIEAAYgAQYogQyCBAAGIAEGKIESOEZUABYjxhwAXgAkAEBmAGwAqABnRmqAQgwLjEzLjMuMbgBA8gBAPgBAZgCEaAC4xfCAgUQABiABMICCxAuGIAEGMcBGK8BwgIHEAAYgAQYE8ICCBAAGBMYFhgewgIFEAAY7wXCAggQABiiBBiJBcICBxAjGLACGCfCAgYQABgNGB6YAwCSBwYxLjEzLjOgB86CAbIHBjAuMTMuM7gH3xfCBwgwLjIuMTIuM8gHVYAIAA&sclient=gws-wiz-serp#lrd=0xa699219e14f879:0x2d4cacc877f17bf1,3,,,,", "_blank")}
+            onClick={() => window.open("https://search.google.com/local/writereview?placeid=ChIJefgUniGZpgAR8Xvxd8isTC0&source=g.page.m._&utm_source=gbp&laa=merchant-review-solicitation", "_blank")}
             className="bg-[#0177B5] hover:bg-[#0177B5]/90 text-white"
           >
             Deixar avaliação

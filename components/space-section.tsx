@@ -15,7 +15,10 @@ export function SpaceSection() {
     "/images/img7.jpg",
     "/images/img8.jpg",
     "/images/img9.jpg",
-    "/images/img10.jpg"
+    "/images/img10.jpg",
+    "/images/img13.jpeg",
+    "/images/img14.jpeg",
+    "/images/img15.jpeg"
   ]
 
   const handleImageClick = (src: string) => {

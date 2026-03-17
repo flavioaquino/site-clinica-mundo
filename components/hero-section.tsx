@@ -74,18 +74,19 @@ export function HeroSection() {
             <div className="absolute -bottom-8 -left-8 h-36 w-36 rounded-full bg-[#FACC15]/25 blur-2xl" aria-hidden="true" />
 
             <DialogHeader className="relative z-10 text-center sm:text-center">
-              <DialogTitle className="text-3xl font-black text-[#015A89]">Seja bem vindo!</DialogTitle>
+              <DialogTitle className="text-3xl font-black text-[#015A89]">Seja bem vindo(a), eu sou o Mundico.</DialogTitle>
             </DialogHeader>
 
             <div className="relative z-10 mt-4 flex flex-col items-center gap-3">
               <div className="relative">
-                <div className="absolute inset-0 scale-110 rounded-full bg-[#0177B5]/15 blur-xl" aria-hidden="true" />
+                <div className="absolute inset-0 scale-130 rounded-full bg-[#0177B5]/15 blur-xl" aria-hidden="true" />
                 <img
                   src="/images/mascote.png"
                   alt="Mascote Clinica Mundo"
-                  className="relative h-44 w-44 object-contain drop-shadow-[0_16px_22px_rgba(1,119,181,0.25)] animate-mascot-bounce"
+                  className="relative h-60 w-60 object-contain drop-shadow-[0_16px_22px_rgba(1,119,181,0.25)] animate-mascot-bounce"
                 />
               </div>
+              <DialogTitle className="text-xl font-black text-[#015A89]">Posso te ajudar a agendar sua consulta, vamos lá?</DialogTitle>
             </div>
 
             <DialogFooter className="relative z-10 mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
