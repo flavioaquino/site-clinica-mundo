@@ -133,13 +133,6 @@ export function Header() {
                 Nosso Espaço
               </a>
               <a
-                href="#equipe"
-                className="text-gray-700 hover:text-[#0177B5] py-2 px-4 rounded-lg hover:bg-[#0177B5]/10 transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Equipe
-              </a>
-              <a
                 href="#contato"
                 className="text-gray-700 hover:text-[#0177B5] py-2 px-4 rounded-lg hover:bg-[#0177B5]/10 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}

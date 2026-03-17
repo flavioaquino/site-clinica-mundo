@@ -89,8 +89,7 @@ export function LocationSection() {
                       <h4 className="font-semibold text-gray-800 mb-1">Horário de Funcionamento</h4>
                       <div className="text-gray-600 space-y-1">
                         <p><span className="font-medium">Segunda a Sexta:</span> 8h às 18h</p>
-                        <p><span className="font-medium">Sábado:</span> 8h às 12h</p>
-                        <p className="text-sm text-gray-500">Domingo: Fechado</p>
+                        <p className="text-sm text-gray-500">Sábado e Domingo: Fechado</p>
                       </div>
                     </div>
                   </div>

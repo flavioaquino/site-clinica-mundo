@@ -74,8 +74,8 @@ export function Footer() {
               <div className="space-y-2">
                 <p className="text-gray-300">Segunda a Sexta</p>
                 <p className="text-gray-400 text-sm">8h às 18h</p>
-                <p className="text-gray-300">Sábado</p>
-                <p className="text-gray-400 text-sm">8h às 12h</p>
+                <p className="text-gray-300">Sábado e Domingo</p>
+                <p className="text-gray-400 text-sm">Fechado</p>
               </div>
             </div>
           </div>
