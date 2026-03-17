@@ -12,9 +12,6 @@ export function LocationSection() {
             <MapPin className="w-8 h-8 text-[#0177B5]" />
             <h2 className="text-4xl font-bold text-[#0177B5]">Nossa Localização</h2>
           </div>
-          <p className="text-lg text-gray-600">
-            Avenida do Contorno, 6321 - 6º andar, Bairro São Pedro, Belo Horizonte - MG
-          </p>
         </div>
 
         <div className="max-w-6xl mx-auto">
