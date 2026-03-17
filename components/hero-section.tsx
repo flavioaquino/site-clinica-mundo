@@ -90,7 +90,7 @@ export function HeroSection() {
 
             <DialogFooter className="relative z-10 mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
               <Button
-                onClick={() => window.open("https://api.whatsapp.com/send?phone=5531992789423", "_blank")}
+                onClick={() => window.open("https://api.whatsapp.com/send?phone=5531975557435", "_blank")}
                 className="h-12 rounded-xl bg-green-500 px-6 text-base font-bold shadow-lg shadow-green-500/30 hover:bg-green-600"
               >
                 <i className="fa-brands fa-whatsapp mr-2 text-xl"></i>
@@ -103,9 +103,12 @@ export function HeroSection() {
 
       <div className="absolute inset-0">
         <div
-          className="w-full h-full bg-fill bg-center opacity-70"
+          className="w-full h-full bg-center bg-cover opacity-70"
           style={{
             backgroundImage: "url('/images/background.jpeg')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
           }}
         ></div>
       </div>
@@ -178,7 +181,7 @@ export function HeroSection() {
               <div className="text-gray-800">
                 <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
                   <Button
-                    onClick={() => window.open("https://api.whatsapp.com/send?phone=5531992789423", "_blank")}
+                    onClick={() => window.open("https://api.whatsapp.com/send?phone=5531975557435", "_blank")}
                     size="lg"
                     className="bg-green-500 hover:bg-green-600 text-[white] font-semibold text-lg px-6 py-7 shadow-xl hover:shadow-2xl transition-all hover:scale-105"
                   >

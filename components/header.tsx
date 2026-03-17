@@ -11,7 +11,7 @@ export function Header() {
     {
       name: "WhatsApp",
       icon: <Phone className="w-5 h-5" />,
-      url: "https://api.whatsapp.com/send?phone=5531992789423",
+      url: "https://api.whatsapp.com/send?phone=5531975557435",
       color: "hover:bg-green-500"
     },
     {
@@ -23,7 +23,7 @@ export function Header() {
     {
       name: "Maps",
       icon: <i className="fa-solid fa-map-location-dot text-lg"></i>,
-      url: "https://www.google.com/maps/place/Cl%C3%ADnica+Mundo+-+Desenvolvimento+Infantil/@-19.9403111,-19.9403111,16z/data=!4m6!3m5!1s0xa699219e14f879:0x2d4cacc877f17bf1!8m2!3d-19.9403111!4d-43.9363248!16s%2Fg%2F11t_3wk0hd",
+      url: "https://maps.app.goo.gl/bYuBdeKKY7QjF23q6",
       color: "hover:bg-red-500"
     }
   ]

@@ -141,7 +141,7 @@ Ver **[GUIA-PERSONALIZACAO.md](./GUIA-PERSONALIZACAO.md)** para mais detalhes.
 
 ## 📞 Contato
 
-- **WhatsApp**: (31) 99278-9423
+- **WhatsApp**: (31) 97555-7435
 - **Email**: mundodesenvolvimentoinfantil@gmail.com
 - **Instagram**: [@clinica.mundo](https://www.instagram.com/clinica.mundo/)
 - **Localização**: Av. do Contorno, 6321, 6º andar - Bairro São Pedro, Belo Horizonte - MG

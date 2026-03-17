@@ -68,9 +68,9 @@ export function LocationSection() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-800 mb-1">Telefone / WhatsApp</h4>
-                      <p className="text-gray-600">(31) 99278-9423</p>
+                      <p className="text-gray-600">(31) 97555-7435</p>
                       <Button
-                        onClick={() => window.open("https://api.whatsapp.com/send?phone=5531992789423", "_blank")}
+                        onClick={() => window.open("https://api.whatsapp.com/send?phone=5531975557435", "_blank")}
                         className="mt-2 bg-green-500 hover:bg-green-600 text-white"
                         size="sm"
                       >
@@ -99,7 +99,7 @@ export function LocationSection() {
                 {/* Botão Como Chegar */}
                 <div className="mt-8 pt-6 border-t">
                   <Button
-                    onClick={() => window.open("https://www.google.com/maps/place/Cl%C3%ADnica+Mundo+-+Desenvolvimento+Infantil/@-19.9403111,-19.9403111,16z/data=!4m6!3m5!1s0xa699219e14f879:0x2d4cacc877f17bf1!8m2!3d-19.9403111!4d-43.9363248!16s%2Fg%2F11t_3wk0hd", "_blank")}
+                    onClick={() => window.open("https://maps.app.goo.gl/bYuBdeKKY7QjF23q6", "_blank")}
                     className="w-full bg-[#0177B5] hover:bg-[#0177B5]/90 text-white text-lg py-6"
                     size="lg"
                   >

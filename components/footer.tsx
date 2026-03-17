@@ -27,7 +27,7 @@ export function Footer() {
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="http://wa.me/5531992789423"
+                href="http://wa.me/5531975557435"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-[#0177B5] rounded-full flex items-center justify-center hover:bg-[#0177B5]/90 transition-colors"
@@ -43,8 +43,8 @@ export function Footer() {
               <div className="flex items-start space-x-3">
                 <Phone className="w-5 h-5 text-yellow-500 flex-shrink-0 mt-1" />
                 <div>
-                  <p className="text-gray-300">(31) 99278-9423</p>
-                  <p onClick={() => window.open("http://wa.me/5531992789423", "_blank")} className="text-gray-400 text-sm cursor-pointer">WhatsApp</p>
+                  <p className="text-gray-300">(31) 97555-7435</p>
+                  <p onClick={() => window.open("http://wa.me/5531975557435", "_blank")} className="text-gray-400 text-sm cursor-pointer">WhatsApp</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
