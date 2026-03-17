@@ -78,13 +78,6 @@ export function SpaceSection() {
             </div>
           </div>
         )}
-
-        <div className="text-center mt-12">
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Um ambiente acolhedor e moderno, especialmente projetado para o bem-estar das crianças e tranquilidade das
-            famílias. Cada espaço foi pensado para proporcionar conforto e estimular o desenvolvimento infantil.
-          </p>
-        </div>
       </div>
     </section>
   )

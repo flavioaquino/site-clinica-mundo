@@ -90,7 +90,7 @@ export function TestimonialsSection() {
                     <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
-                <p className="text-gray-700 mb-4 min-h-[80px]">
+                <p className="text-gray-700 mb-4 min-h-[80px] text-justify">
                   "{testimonial.text}"
                 </p>
                 <div className="border-t pt-4">

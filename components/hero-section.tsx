@@ -66,7 +66,7 @@ export function HeroSection() {
   }
 
   return (
-      <section id="inicio" className="relative min-h-screen flex items-center bg-white overflow-x-hidden">
+    <section id="inicio" className="relative bg-white overflow-x-hidden">
       <Dialog open={isMascotOpen} onOpenChange={setIsMascotOpen}>
         <DialogContent className="overflow-hidden border-0 bg-gradient-to-br from-[#EAF7FF] via-white to-[#FFF9E8] p-0 sm:max-w-[560px]">
           <div className="relative px-6 pb-6 pt-8 sm:px-8 sm:pb-8">
@@ -103,106 +103,106 @@ export function HeroSection() {
 
       <div className="absolute inset-0">
         <div
-          className="w-full h-full bg-cover bg-center opacity-20"
+          className="w-full h-full bg-fill bg-center opacity-70"
           style={{
-            backgroundImage: "url('/images/image.png')",
+            backgroundImage: "url('/images/background.jpeg')",
           }}
         ></div>
       </div>
 
-      <div className="relative z-10 w-full px-4 py-20 overflow-hidden">
-        {/* Carrossel de Banners */}
-        <div className="relative mb-8">
-          <div className="w-screen sm:w-full lg:max-w-6xl lg:mx-auto -mx-4 sm:mx-0 relative bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl">
-            {/* Imagens do Carrossel */}
-            <div className="relative aspect-[21/9] max-h-[260px] sm:max-h-[320px] md:max-h-[420px] lg:max-h-[520px]">
-              {banners.map((banner, index) => (
-                <div
-                  key={banner.id}
-                  className={`absolute inset-0 transition-opacity duration-500 ${
-                    index === currentSlide ? "opacity-100" : "opacity-0"
-                  }`}
-                >
-                  <img
-                    src={banner.image}
-                    alt={banner.alt}
-                    className="w-full h-full object-contain lg:object-cover"
-                    onError={(e) => {
-                      // Fallback para cores do site (azul e amarelo) caso a imagem não carregue
-                      (e.target as HTMLImageElement).style.display = 'none';
-                      (e.target as HTMLImageElement).parentElement!.style.background = 
-                        `linear-gradient(135deg, ${
-                          index === 0 ? '#3B82F6' : index === 1 ? '#2563EB' : '#1D4ED8'
-                        }, ${
-                          index === 0 ? '#EAB308' : index === 1 ? '#F59E0B' : '#FBBF24'
-                        })`;
-                    }}
-                  />
-                  {/* Overlay com gradiente */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-                </div>
-              ))}
+      <div className="relative z-10 w-full overflow-hidden pt-4 pb-12 sm:pt-8 sm:pb-16 lg:py-20">
+        <div className="container mx-auto px-5">
+          <div className="mx-auto w-full max-w-[370px] sm:max-w-none">
+            {/* Carrossel de Banners */}
+            <div className="relative mb-8">
+              <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl">
+                {/* Imagens do Carrossel */}
+                <div className="relative aspect-[1600/623] min-h-[100px] sm:min-h-[320px] md:min-h-[420px] lg:min-h-[500px]">
+                  {banners.map((banner, index) => (
+                    <div
+                      key={banner.id}
+                      className={`absolute inset-0 transition-opacity duration-500 ${index === currentSlide ? "opacity-100" : "opacity-0"
+                        }`}
+                    >
+                      <img
+                        src={banner.image}
+                        alt={banner.alt}
+                        className="w-full h-full object-contain object-center bg-white/10"
+                        onError={(e) => {
+                          // Fallback para cores do site (azul e amarelo) caso a imagem não carregue
+                          (e.target as HTMLImageElement).style.display = 'none';
+                          (e.target as HTMLImageElement).parentElement!.style.background =
+                            `linear-gradient(135deg, ${index === 0 ? '#3B82F6' : index === 1 ? '#2563EB' : '#1D4ED8'
+                            }, ${index === 0 ? '#EAB308' : index === 1 ? '#F59E0B' : '#FBBF24'
+                            })`;
+                        }}
+                      />
+                      {/* Overlay com gradiente */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                    </div>
+                  ))}
 
-              {/* Botões de Navegação */}
-              <button
-                onClick={prevSlide}
-                className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 hover:bg-white rounded-full flex items-center justify-center transition-all hover:scale-110 shadow-lg"
-                aria-label="Banner anterior"
-              >
-                <ChevronLeft className="w-6 h-6 text-[#0177B5]" />
-              </button>
-              <button
-                onClick={nextSlide}
-                className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 hover:bg-white rounded-full flex items-center justify-center transition-all hover:scale-110 shadow-lg"
-                aria-label="Próximo banner"
-              >
-                <ChevronRight className="w-6 h-6 text-[#0177B5]" />
-              </button>
-
-              {/* Indicadores */}
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
-                {banners.map((_, index) => (
+                  {/* Botões de Navegação */}
                   <button
-                    key={index}
-                    onClick={() => setCurrentSlide(index)}
-                    className={`w-2.5 h-2.5 rounded-full transition-all ${
-                      index === currentSlide
-                        ? "bg-white w-8"
-                        : "bg-white/50 hover:bg-white/75"
-                    }`}
-                    aria-label={`Ir para banner ${index + 1}`}
-                  />
-                ))}
+                    onClick={prevSlide}
+                    className="absolute left-4 top-1/2 -translate-y-1/2 w-7 h-7 sm:w-10 sm:h-10 bg-white/80 hover:bg-white rounded-full flex items-center justify-center transition-all hover:scale-110 shadow-lg"
+                    aria-label="Banner anterior"
+                  >
+                    <ChevronLeft className="w-4 h-4 sm:w-6 sm:h-6 text-[#0177B5]" />
+                  </button>
+                  <button
+                    onClick={nextSlide}
+                    className="absolute right-4 top-1/2 -translate-y-1/2 w-7 h-7 sm:w-10 sm:h-10 bg-white/80 hover:bg-white rounded-full flex items-center justify-center transition-all hover:scale-110 shadow-lg"
+                    aria-label="Próximo banner"
+                  >
+                    <ChevronRight className="w-4 h-4 sm:w-6 sm:h-6 text-[#0177B5]" />
+                  </button>
+
+                  {/* Indicadores */}
+                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+                    {banners.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setCurrentSlide(index)}
+                        className={`w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full transition-all ${index === currentSlide
+                            ? "bg-white sm:w-8"
+                            : "bg-white/50 hover:bg-white/75"
+                          }`}
+                        aria-label={`Ir para banner ${index + 1}`}
+                      />
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
 
-        <div className="max-w-3xl mx-auto">
-          <div className="text-gray-800">
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                onClick={() => window.open("https://api.whatsapp.com/send?phone=5531992789423", "_blank")} 
-                size="lg" 
-                className="bg-yellow-500 hover:bg-yellow-600 text-[#0177B5] font-semibold text-lg px-8 py-6 shadow-xl hover:shadow-2xl transition-all hover:scale-105"
-              >
-                <i className="fa-brands fa-whatsapp mr-2 text-xl"></i>
-                Agendar Consulta
-              </Button>
-              <Button 
-                onClick={() => {
-                  const locationSection = document.getElementById('localizacao');
-                  if (locationSection) {
-                    locationSection.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }} 
-                size="lg" 
-                variant="outline"
-                className="bg-white/90 hover:bg-white text-[#0177B5] font-semibold text-lg px-8 py-6 border-2 border-white shadow-xl hover:shadow-2xl transition-all hover:scale-105"
-              >
-                <MapPin className="w-5 h-5 mr-2" />
-                Como Chegar
-              </Button>
+            <div className="max-w-3xl mx-auto">
+              <div className="text-gray-800">
+                <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button
+                    onClick={() => window.open("https://api.whatsapp.com/send?phone=5531992789423", "_blank")}
+                    size="lg"
+                    className="bg-yellow-500 hover:bg-yellow-600 text-[#0177B5] font-semibold text-lg px-8 py-6 shadow-xl hover:shadow-2xl transition-all hover:scale-105"
+                  >
+                    <i className="fa-brands fa-whatsapp mr-2 text-xl"></i>
+                    Agendar Consulta
+                  </Button>
+                  <Button
+                    onClick={() => {
+                      const locationSection = document.getElementById('localizacao');
+                      if (locationSection) {
+                        locationSection.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }}
+                    size="lg"
+                    variant="outline"
+                    className="bg-white/90 hover:bg-white text-[#0177B5] font-semibold text-lg px-8 py-6 border-2 border-white shadow-xl hover:shadow-2xl transition-all hover:scale-105"
+                  >
+                    <MapPin className="w-5 h-5 mr-2" />
+                    Como Chegar
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
