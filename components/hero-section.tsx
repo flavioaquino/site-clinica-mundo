@@ -117,7 +117,7 @@ export function HeroSection() {
             <div className="relative mb-8">
               <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl">
                 {/* Imagens do Carrossel */}
-                <div className="relative aspect-[1600/623] min-h-[100px] sm:min-h-[320px] md:min-h-[420px] lg:min-h-[500px]">
+                <div className="relative aspect-[1600/623] min-h-[100px] sm:min-h-[320px] md:min-h-[420px] lg:min-h-[360px]">
                   {banners.map((banner, index) => (
                     <div
                       key={banner.id}
