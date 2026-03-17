@@ -74,14 +74,7 @@ export function HeroSection() {
             <div className="absolute -bottom-8 -left-8 h-36 w-36 rounded-full bg-[#FACC15]/25 blur-2xl" aria-hidden="true" />
 
             <DialogHeader className="relative z-10 text-center sm:text-center">
-              <div className="mx-auto mb-3 inline-flex items-center gap-2 rounded-full border border-[#0177B5]/20 bg-white/80 px-3 py-1 text-xs font-semibold text-[#0177B5]">
-                <Sparkles className="h-3.5 w-3.5" />
-                Seu novo melhor amigo chegou
-              </div>
               <DialogTitle className="text-3xl font-black text-[#015A89]">Seja bem vindo!</DialogTitle>
-              <DialogDescription className="mx-auto mt-2 max-w-md text-[15px] leading-relaxed text-slate-700">
-                Nosso mascote quer ajudar você a agendar em segundos. Toque no botão e fale com a nossa equipe pelo WhatsApp.
-              </DialogDescription>
             </DialogHeader>
 
             <div className="relative z-10 mt-4 flex flex-col items-center gap-3">
@@ -93,9 +86,6 @@ export function HeroSection() {
                   className="relative h-44 w-44 object-contain drop-shadow-[0_16px_22px_rgba(1,119,181,0.25)] animate-mascot-bounce"
                 />
               </div>
-              <p className="max-w-md text-center text-lg font-semibold text-[#0B3B5A]">
-                Agende sua consulta agora e garanta um atendimento cheio de cuidado.
-              </p>
             </div>
 
             <DialogFooter className="relative z-10 mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
@@ -105,13 +95,6 @@ export function HeroSection() {
               >
                 <i className="fa-brands fa-whatsapp mr-2 text-xl"></i>
                 Agendar Consulta
-              </Button>
-              <Button
-                variant="outline"
-                onClick={() => setIsMascotOpen(false)}
-                className="h-12 rounded-xl border-[#0177B5]/30 bg-white/70 px-6 text-[#015A89] hover:bg-white"
-              >
-                Agora não
               </Button>
             </DialogFooter>
           </div>

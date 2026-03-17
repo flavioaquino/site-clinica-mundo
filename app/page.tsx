@@ -2,9 +2,7 @@ import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
 import { SpecialtiesSection } from "@/components/specialties-section"
 import { SpaceSection } from "@/components/space-section"
-import { ProfessionalSection } from "@/components/professional-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
-import MissionSection from "@/components/mission-section"
 import { LocationSection } from "@/components/location-section"
 import { Footer } from "@/components/footer"
 
@@ -16,9 +14,7 @@ export default function Home() {
         <HeroSection />
         <SpecialtiesSection />
         <SpaceSection />
-        <ProfessionalSection />
         <TestimonialsSection />
-        <MissionSection />
         <LocationSection />
       </main>
       <Footer />

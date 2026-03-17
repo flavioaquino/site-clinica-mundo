@@ -55,9 +55,6 @@ export function Header() {
               <a href="#espaco" className="text-gray-700 hover:text-[#0177B5] transition-colors">
                 Espaço
               </a>
-              <a href="#equipe" className="text-gray-700 hover:text-[#0177B5] transition-colors">
-                Equipe
-              </a>
               <a href="#contato" className="text-gray-700 hover:text-[#0177B5] transition-colors">
                 Contato
               </a>
