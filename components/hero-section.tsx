@@ -111,7 +111,7 @@ export function HeroSection() {
       </div>
 
       <div className="relative z-10 w-full overflow-hidden pt-4 pb-12 sm:pt-8 sm:pb-16 lg:py-20">
-        <div className="container mx-auto px-5">
+        <div className="container mx-auto px-5 lg:px-[10%]">
           <div className="mx-auto w-full max-w-[370px] sm:max-w-none">
             {/* Carrossel de Banners */}
             <div className="relative mb-8">
