@@ -104,7 +104,7 @@ export function SpecialtiesSection() {
                 </div>
               )}
               {specialty.description && (
-                <p className="text-gray-600 text-sm text-justify">{specialty.description}</p>
+                <p className="text-gray-600 text-m text-justify">{specialty.description}</p>
               )}
             </div>
           ))}

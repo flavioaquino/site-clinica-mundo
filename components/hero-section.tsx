@@ -111,7 +111,7 @@ export function HeroSection() {
       </div>
 
       <div className="relative z-10 w-full overflow-hidden pt-4 pb-12 sm:pt-8 sm:pb-16 lg:py-20">
-        <div className="container mx-auto px-5 lg:px-[10%]">
+        <div className="container mx-auto px-5 lg:px-[2%]">
           <div className="mx-auto w-full max-w-[370px] sm:max-w-none">
             {/* Carrossel de Banners */}
             <div className="relative mb-8">
@@ -137,8 +137,6 @@ export function HeroSection() {
                             })`;
                         }}
                       />
-                      {/* Overlay com gradiente */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                     </div>
                   ))}
 
@@ -182,7 +180,7 @@ export function HeroSection() {
                   <Button
                     onClick={() => window.open("https://api.whatsapp.com/send?phone=5531992789423", "_blank")}
                     size="lg"
-                    className="bg-yellow-500 hover:bg-yellow-600 text-[#0177B5] font-semibold text-lg px-8 py-6 shadow-xl hover:shadow-2xl transition-all hover:scale-105"
+                    className="bg-green-500 hover:bg-green-600 text-[white] font-semibold text-lg px-6 py-7 shadow-xl hover:shadow-2xl transition-all hover:scale-105"
                   >
                     <i className="fa-brands fa-whatsapp mr-2 text-xl"></i>
                     Agendar Consulta
